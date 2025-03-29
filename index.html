@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <style>
+      .manrope {
+        
+      }
+      body {
+        font-family: "Red Hat Display", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        background-color: white;
+      }
+      .pricing-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 2rem;
+      }
+      .pricing-plan {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 400px;
+        border-radius: 5%;
+        box-shadow: 5px 10px;
+        background-color: rgb(242, 242, 242);
+      }
+      .standard .plan-title{
+        color: rgb(23, 23, 179);
+      }
+      .premium .plan-title{
+        color: goldenrod;
+      }
+      .plan-features{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        gap: 15px;
+      }
+
+      .plan-title{
+        font-size: 35px;
+        margin-top: 20px;
+        font-weight: 900;
+        text-align: center;
+        background-color: antiquewhite;
+      }
+
+      .plan-price{
+        margin-bottom: 15px;
+        text-align: center;
+        background-color:antiquewhite;
+      }
+
+      .title-and-price{
+        width: 100%;
+      }
+
+      .feature-elements{
+        display: flex;
+      }
+
+      .plan-button{
+        margin-bottom: 15px;
+        height: 35px;
+        width: 75px;
+        background-color:steelblue;
+        color: aliceblue;
+        border: 1px;
+        border-radius: 5%;
+        font-size: 14px;
+      }
+
+      .datagif{
+        max-width: 53px;
+        border-radius: 25%;
+        margin-right: 20px;
+      }
+
+      .usergif{
+        max-width: 53px;
+        border-radius: 25%;
+        margin-right: 20px;
+      }
+
+      .supportgif{
+        max-width: 53px;
+        border-radius: 25%;
+        margin-right: 20px;
+      }
+
+      .adgif{
+        max-width: 53px;
+        border-radius: 25%;
+        margin-right: 20px;
+      }
+
+      /* Hint: What can you do with a media query and flexbox? */
+      @media (max-width: 1250px) {
+        .pricing-container{
+          flex-direction: column;
+          justify-content: space-evenly;
+        }
+        .pricing-plan{
+          min-width: 400px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="basic pricing-plan">
+        <div class="title-and-price">
+          <div class="plan-title">Basic</div>
+          <div class="plan-price"><i>$9.99/month</i></div>
+        </div>
+        <ul class="plan-features">
+          <li>
+            <div class="feature-elements">
+              <img class=datagif src="./assets/data.gif">
+              <p> <b>10GB</b> Cloud Storage</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-elements">
+              <img class=usergif src="./assets/integration.gif">
+              <p> <b>1 User</b> only</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-elements">
+              <img class=supportgif src="./assets/tech-support.gif">
+              <p> <b>No Support</b></p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-elements">
+              <img class=adgif src="./assets/advertising.gif">
+              <p><b>Personalized Ads</b></p>
+            </div>
+          </li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="standard pricing-plan">
+        <div class="title-and-price">
+          <div class="plan-title">Standard</div>
+          <div class="plan-price"><i>$19.99/month</i></div>
+        </div>
+        <ul class="plan-features">
+          <li>
+            <div class="feature-elements">
+              <img class=datagif src="./assets/data.gif">
+              <p> <b>50GB</b> Cloud Storage</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-elements">
+              <img class=usergif src="./assets/integration.gif">
+              <p><b>5 Users</b></p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-elements">
+              <img class=supportgif src="./assets/tech-support.gif">
+              <p><b>Phone & E-Mail Support</b></p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-elements">
+              <img class=adgif src="./assets/advertising.gif">
+              <p><b>No Ads</b></p>
+            </div>
+          </li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="premium pricing-plan">
+        <div class="title-and-price">
+          <div class="plan-title">Premium</div>
+          <div class="plan-price"><i>$49.99/month</i></div>
+        </div>
+        <ul class="plan-features">
+          <li>
+            <div class="feature-elements">
+              <img class=datagif src="./assets/data.gif">
+              <p> <b>100GB</b> Cloud Storage</p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-elements">
+              <img class=usergif src="./assets/integration.gif">
+              <p><b>10 Users</b></p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-elements">
+              <img class=supportgif src="./assets/tech-support.gif">
+              <p><b>24/7 Customer Support</b></p>
+            </div>
+          </li>
+          <li>
+            <div class="feature-elements">
+              <img class=adgif src="./assets/advertising.gif">
+              <p><b>No Ads</b></p>
+            </div>
+          </li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>
